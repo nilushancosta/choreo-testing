@@ -32,15 +32,15 @@ public type CheckoutResponse record {|
 
 table<AddItemData> addItemTable = table[]; 
 
-@http:ServiceConfig {
-    cors: {
-        allowOrigins: ["*"],
-        allowCredentials: false,
-        allowHeaders: ["CORELATION_ID"],
-        exposeHeaders: ["X-CUSTOM-HEADER"],
-        maxAge: 84900
-    }
-}
+//@http:ServiceConfig {
+//    cors: {
+//        allowOrigins: ["*"],
+//        allowCredentials: false,
+//        allowHeaders: ["CORELATION_ID"],
+//        exposeHeaders: ["X-CUSTOM-HEADER"],
+//        maxAge: 84900
+//    }
+//}
 
 service /petstore on new http:Listener(9090) {
     //private final mysql:Client dbClient;
