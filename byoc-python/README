@@ -1,0 +1,9 @@
+//install docker via https://docs.docker.com/desktop/install/mac-install/, 
+
+//build docker image
+docker build -t my-python-service .
+
+//run docker image
+docker run -p 8080:8080 my-python-service
+
+pip freeze > requirements.txt will generate the requirements.txt file with all the dependencies.
