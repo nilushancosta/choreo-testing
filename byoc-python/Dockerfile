@@ -1,6 +1,9 @@
 # Use an official Python runtime as a parent image
 FROM python:3.9-slim-buster
 
+# Create a non-root user
+RUN adduser --system myuser
+
 # Set the working directory to /app
 WORKDIR /app
 
@@ -15,6 +18,9 @@ EXPOSE 8080
 
 # Define environment variable
 ENV NAME World
+
+# Switch to the non-root user
+USER myuser
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
