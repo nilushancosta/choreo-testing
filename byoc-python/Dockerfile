@@ -1,8 +1,8 @@
 # Use an official Python runtime as a parent image
 FROM python:3.9-slim-buster
 
-# Create a non-root user
-RUN adduser --system myuser
+# Ensure USER is set to a value between 10000 and 20000 (Eg. USER 10001)
+RUN adduser --system --uid 10001 --group myuser
 
 # Set the working directory to /app
 WORKDIR /app
