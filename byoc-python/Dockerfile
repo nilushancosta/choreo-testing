@@ -2,7 +2,8 @@
 FROM python:3.9-slim-buster
 
 # Ensure USER is set to a value between 10000 and 20000 (Eg. USER 10001)
-RUN adduser --system --uid 10001 --group myuser
+RUN useradd -u 10001 myuser
+
 
 # Set the working directory to /app
 WORKDIR /app
