@@ -21,7 +21,7 @@ EXPOSE 8080
 ENV NAME World
 
 # Switch to the non-root user
-USER myuser
+USER 10001
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
